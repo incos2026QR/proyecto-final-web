@@ -1,0 +1,41 @@
+-- Contenido aprobado explícitamente por el usuario el 17/10/2026.
+-- Verificar nuevamente los contactos oficiales antes de futuras publicaciones.
+insert into public.topics (slug, title, description, image_url, position, is_published)
+values (
+  'trata-estafas-digitales',
+  'Trata para cometer estafas digitales',
+  'Aprende a reconocer ofertas falsas usadas para captar personas y a distinguir estafa de trata con fines de criminalidad forzada.',
+  'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=85',
+  3,
+  true
+)
+on conflict (slug) do update set
+  title = excluded.title,
+  description = excluded.description,
+  image_url = excluded.image_url,
+  position = excluded.position,
+  is_published = excluded.is_published;
+
+insert into public.quiz_questions (
+  topic_slug, quiz_type, prompt, options, correct_index, explanation, source_slide, position
+)
+values
+  ('trata-estafas-digitales', 'optional', '¿Qué diferencia mejor una estafa en línea de la trata con fines de criminalidad forzada?', jsonb_build_array('Toda persona que envía un mensaje fraudulento necesariamente es tratante.', 'En la trata, una persona puede ser engañada y coaccionada para cometer fraudes en beneficio de quienes la controlan.', 'Si alguien viajó por trabajo, eso por sí solo prueba que fue víctima de trata.', 'La trata solo ocurre cuando una persona no usa internet.'), 1, 'El material distingue a quien recibe una estafa de la persona que puede ser obligada a cometerla; la coerción y las condiciones importan.', 1, 1),
+  ('trata-estafas-digitales', 'optional', '¿Cuál es una práctica prudente antes de viajar por una oferta laboral?', jsonb_build_array('Verificar la empresa por un canal independiente y pedir las condiciones por escrito.', 'Entregar el pasaporte original para guardarlo en la oficina.', 'Pagar una tarifa urgente antes de conocer el puesto.', 'Mantener el viaje en secreto para no perder la oportunidad.'), 0, 'Verificar la empresa y las condiciones antes de desplazarse reduce la dependencia de la información enviada por quien recluta.', 3, 2),
+  ('trata-estafas-digitales', 'optional', '¿Una oferta con sueldo alto demuestra por sí sola que existe trata?', jsonb_build_array('Sí, todas las ofertas con salarios altos son trata.', 'Sí, si la vacante aparece en redes sociales.', 'No; una señal aislada no lo prueba, aunque la presión o las condiciones poco claras justifican pausar y verificar.', 'No; el engaño laboral nunca puede relacionarse con explotación.'), 2, 'El material pide evaluar contexto y patrones, sin convertir un solo indicador en una conclusión.', 2, 3),
+  ('trata-estafas-digitales', 'optional', 'Si alguien te cuenta que fue obligado a participar en una estafa, ¿qué respuesta ayuda más?', jsonb_build_array('Publicar su nombre y ubicación para que otras personas lo reconozcan.', 'Preguntarle por qué no se negó desde el principio.', 'Escuchar sin juzgar y consultar si es seguro contactar apoyo confiable.', 'Avisar de inmediato a quien parece controlar el lugar.'), 2, 'Escuchar sin culpar, valorar si es seguro conversar y buscar apoyo evita exponer a la persona a represalias.', 7, 4),
+  ('trata-estafas-digitales', 'required', '¿Qué describe la trata con fines de criminalidad forzada en operaciones de estafa?', jsonb_build_array('Cualquier persona que pierde dinero en una estafa en línea.', 'Una persona engañada o coaccionada para cometer delitos en beneficio de quienes la controlan.', 'Toda persona que trabaja en atención al cliente.', 'Cualquier oferta laboral publicada en una red social.'), 1, 'La situación combina explotación y obligación o coerción para cometer delitos; no toda estafa ni todo empleo reúnen esas condiciones.', 1, 1),
+  ('trata-estafas-digitales', 'required', '¿Cuál conjunto de condiciones merece detenerse y verificar una oferta?', jsonb_build_array('Tareas y salario claros, con tiempo para revisar el contrato.', 'Empresa comprobable por un canal independiente.', 'Presión para viajar pronto, guardar secreto y pagar antes de explicar quién contrata.', 'Una persona de confianza puede revisar la propuesta.'), 2, 'La urgencia, el secreto y el pago anticipado sin información verificable son motivos para pausar; ninguno aislado prueba trata.', 2, 2),
+  ('trata-estafas-digitales', 'required', '¿Cómo conviene verificar una empresa que ofrece empleo en otro país?', jsonb_build_array('Usar solo los enlaces y teléfonos proporcionados por la persona reclutadora.', 'Confirmar sus datos en canales independientes y pedir las condiciones del puesto por escrito.', 'Enviar un código de acceso para comprobar que el proceso es real.', 'Esperar a llegar para conocer tareas, salario y alojamiento.'), 1, 'La verificación independiente y la información escrita permiten contrastar lo prometido antes de aceptar o viajar.', 3, 3),
+  ('trata-estafas-digitales', 'required', '¿Cuál situación podría indicar control o coerción dentro del lugar de trabajo?', jsonb_build_array('Puedes conservar tus documentos y comunicarte libremente.', 'Puedes revisar por escrito el salario y las tareas.', 'Retienen tus documentos, restringen tu salida y amenazan a tu familia.', 'Puedes preguntar quién será tu empleador.'), 2, 'Retener documentos, impedir salir y amenazar son señales graves que requieren una valoración segura por personal competente.', 4, 4),
+  ('trata-estafas-digitales', 'required', 'Una persona obligada a estafar también podría ser víctima de trata. ¿Qué implica esto?', jsonb_build_array('Que las personas afectadas por sus estafas no importan.', 'Que debe recibir una valoración de protección, sin dejar de investigar a quienes organizaron la explotación.', 'Que todos los casos se pueden resolver sin autoridades ni especialistas.', 'Que cualquier persona presente en un centro de estafas fue necesariamente coaccionada.'), 1, 'Una respuesta basada en derechos considera a las posibles víctimas y a las personas perjudicadas, e investiga a quienes se benefician de la operación.', 5, 5),
+  ('trata-estafas-digitales', 'required', 'Si sospechas que alguien está bajo control de una red, ¿qué deberías evitar?', jsonb_build_array('Consultar discretamente a un servicio confiable si es seguro.', 'Conservar información de contacto si hacerlo no aumenta el riesgo.', 'Confrontar a quienes controlan el lugar o intentar un rescate por tu cuenta.', 'Preguntar a la persona qué apoyo considera seguro.'), 2, 'La confrontación o un rescate improvisado puede aumentar el peligro para esa persona y para quien intenta ayudar.', 6, 6),
+  ('trata-estafas-digitales', 'required', '¿Qué afirmación sobre las señales de trata es más precisa?', jsonb_build_array('Tener un empleo en línea demuestra que una persona está siendo traficada.', 'Aceptar viajar demuestra que una persona consintió cualquier condición posterior.', 'Una señal aislada no basta; se debe considerar el contexto, el control y la posibilidad de pedir ayuda.', 'Si alguien participó en una estafa, no puede ser víctima de explotación.'), 2, 'El material insiste en valorar patrones de engaño y coerción, sin inferir culpabilidad o victimización a partir de un solo hecho.', 1, 7),
+  ('trata-estafas-digitales', 'required', '¿Qué canal se identifica para orientación ante una posible situación de trata en Bolivia?', jsonb_build_array('Las redes sociales de una persona desconocida que promete rescates.', 'Los canales oficiales de la Policía o el Ministerio de Gobierno, con orientación de la DGTTP/FELCC.', 'La línea general de la Defensoría como si fuera exclusiva para trata.', 'Una empresa privada que solicita un pago para localizar a la persona.'), 1, 'La DGTTP coordina con la División de Trata y Tráfico de la FELCC; los canales de la Defensoría son de contacto general, no una línea exclusiva para trata.', 8, 8)
+on conflict (topic_slug, quiz_type, position) do update set
+  prompt = excluded.prompt,
+  options = excluded.options,
+  correct_index = excluded.correct_index,
+  explanation = excluded.explanation,
+  source_slide = excluded.source_slide,
+  is_active = true;

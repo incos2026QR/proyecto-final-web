@@ -1,0 +1,43 @@
+-- Contenido aprobado por el usuario el 17/10/2026.
+-- Verificar nuevamente los contactos oficiales antes de publicar.
+insert into public.topics (slug, title, description, image_url, position, is_published)
+values (
+  'trabajos-falsos',
+  'Trabajos falsos y ofertas laborales engañosas',
+  'Aprende a verificar ofertas de empleo, detectar presiones y buscar apoyo seguro en Bolivia.',
+  'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85',
+  2,
+  true
+)
+on conflict (slug) do update set
+  title = excluded.title,
+  description = excluded.description,
+  image_url = excluded.image_url,
+  position = excluded.position,
+  is_published = excluded.is_published;
+
+insert into public.quiz_questions (
+  topic_slug, quiz_type, prompt, options, correct_index, explanation, source_slide, position
+)
+values
+  ('trabajos-falsos', 'optional', '¿Qué debes hacer si una oferta promete un salario extraordinario pero no explica tareas ni ubicación?', jsonb_build_array('Aceptarla para no perder la oportunidad.', 'Enviar documentos personales para que te den más detalles.', 'Pausar y pedir información verificable sobre las condiciones del puesto.', 'Viajar a la entrevista sin compartir el plan con nadie.'), 2, 'La diapositiva recomienda frenar y verificar las condiciones cuando la oferta es poco clara; una señal sola no confirma fraude.', 1, 1),
+  ('trabajos-falsos', 'optional', '¿Cómo compruebas mejor que una oferta pertenece a una empresa real?', jsonb_build_array('Llamar solo al teléfono que aparece en el mensaje recibido.', 'Contactar a la empresa por datos encontrados de manera independiente.', 'Confiar en que el correo tenga un logotipo conocido.', 'Enviar primero una copia de tus documentos para validar el proceso.'), 1, 'Un mensaje puede imitar una marca; confirmar por un canal independiente ayuda a verificar el puesto y a quien recluta.', 2, 2),
+  ('trabajos-falsos', 'optional', '¿Qué opción es más prudente antes de mudarte por un empleo?', jsonb_build_array('Aclarar por escrito tareas, salario, ubicación, alojamiento y deducciones.', 'Entregar documentos originales a quien organiza el viaje.', 'Mantener el plan en secreto para evitar que otras personas interfieran.', 'Aceptar cualquier cambio al llegar al destino.'), 0, 'Las condiciones escritas ayudan a comparar lo prometido con lo que se ofrece antes de asumir el viaje.', 4, 3),
+  ('trabajos-falsos', 'optional', '¿Una oferta engañosa demuestra por sí sola que existe trata?', jsonb_build_array('Sí, todas las ofertas falsas son trata.', 'Sí, si el puesto se anuncia por internet.', 'No; hay que considerar el contexto y si aparecen engaño, coerción o explotación.', 'No; las ofertas laborales no pueden vincularse con explotación.'), 2, 'El material diferencia fraude laboral y trata, aunque pueden existir riesgos relacionados.', 1, 4),
+  ('trabajos-falsos', 'optional', '¿Cuál canal de Bolivia puede orientar sobre asuntos laborales generales?', jsonb_build_array('El Ministerio de Trabajo (MTEPS), mediante sus contactos institucionales generales, pidiendo derivación a la oficina laboral correspondiente.', 'La línea de la Defensoría del Pueblo, que es exclusiva para trata.', 'El teléfono del Ministerio de Trabajo, que es una línea de emergencia especializada en trata.', 'La División de Trata y Tráfico de la FELCC, para cualquier consulta de salario o contrato.'), 0, 'El MTEPS publica teléfonos generales de contacto institucional; no se deben confundir con una línea especializada o de emergencia.', 7, 5),
+  ('trabajos-falsos', 'required', '¿Cuál es una manera más segura de confirmar los datos de una empresa?', jsonb_build_array('Usar únicamente el enlace y el número que envió quien recluta.', 'Buscar un canal oficial por separado y preguntar si el puesto y la persona reclutadora son legítimos.', 'Enviar un código de acceso para demostrar interés.', 'Confiar en el logotipo de la oferta.'), 1, 'Una empresa real puede ser suplantada; un canal independiente permite confirmar la oferta sin confiar solo en el mensaje recibido.', 2, 1),
+  ('trabajos-falsos', 'required', '¿Qué información conviene pedir por escrito antes de aceptar?', jsonb_build_array('Solo el nombre de pila de quien recluta.', 'Tareas, ubicación, horario, salario, deducciones y quién contrata.', 'La contraseña del sistema donde se publicará el turno.', 'Una promesa verbal de que todo estará bien.'), 1, 'La diapositiva indica confirmar por escrito los detalles que permiten entender y comparar las condiciones de empleo.', 2, 2),
+  ('trabajos-falsos', 'required', '¿Cuál de estas situaciones justifica pausar y hacer preguntas adicionales?', jsonb_build_array('La persona reclutadora permite verificar la organización por sus canales oficiales.', 'La oferta explica tareas y condiciones por escrito.', 'Te presionan para pagar por adelantado y aceptar de inmediato sin aclarar quién contrata.', 'Puedes consultar las condiciones con alguien de confianza.'), 2, 'La presión para pagar y decidir sin información verificable es preocupante, aunque una señal por sí sola no pruebe un delito.', 3, 3),
+  ('trabajos-falsos', 'required', '¿Qué deberías aclarar antes de viajar por una oferta laboral?', jsonb_build_array('Quién contrata, dónde trabajarás, cuánto cobrarás y qué gastos o deducciones habrá.', 'Cómo entregar tus documentos originales al llegar.', 'Cómo mantener el viaje oculto a todas las personas cercanas.', 'Cómo pagar una deuda que todavía no está explicada.'), 0, 'Conocer las condiciones, gastos y posibles deudas permite valorar la propuesta antes de desplazarte.', 4, 4),
+  ('trabajos-falsos', 'required', '¿Qué conducta podría ser una señal seria de coerción o explotación laboral?', jsonb_build_array('La empresa explica el proceso de pago por escrito.', 'Te impiden conservar tus documentos o amenazan con que no puedes irte.', 'Puedes conservar una copia del acuerdo.', 'Puedes preguntar por tus deducciones.'), 1, 'La retención de documentos, las amenazas y la restricción para irse requieren apoyo; no corresponde a la persona trabajadora resolverlo sola.', 5, 5),
+  ('trabajos-falsos', 'required', '¿Qué información no debes compartir mediante un mensaje no verificado?', jsonb_build_array('Una pregunta general sobre el horario.', 'Un enlace al sitio oficial de la empresa.', 'Contraseñas, códigos de acceso o datos bancarios completos.', 'El nombre del cargo anunciado.'), 2, 'Contraseñas y códigos no deben compartirse; primero confirma la identidad y seguridad del canal antes de enviar cualquier documento sensible.', 5, 6),
+  ('trabajos-falsos', 'required', 'Si una oferta te preocupa, ¿qué puedes hacer sin exponerte a más riesgo?', jsonb_build_array('Confrontar a quien recluta y exigirle una explicación en persona.', 'Conservar mensajes si es seguro y consultar a alguien de confianza o un servicio especializado.', 'Seguir pagando hasta recuperar lo invertido.', 'Investigar por tu cuenta la dirección privada de quien publicó el anuncio.'), 1, 'Guardar información disponible de forma segura y buscar apoyo reduce la necesidad de confrontar o investigar por cuenta propia.', 6, 7),
+  ('trabajos-falsos', 'required', 'Si existe peligro inmediato, ¿qué recomienda el material?', jsonb_build_array('Esperar a reunir pruebas completas antes de pedir ayuda.', 'Volver a reunirte a solas con quien te amenaza.', 'Contactar los servicios de emergencia locales cuando hacerlo sea seguro.', 'Publicar tu ubicación y documentos en redes sociales.'), 2, 'Ante peligro inmediato se recomiendan los servicios de emergencia locales, priorizando la seguridad al pedir ayuda.', 6, 8),
+  ('trabajos-falsos', 'required', '¿Qué afirmación describe mejor los canales oficiales mencionados para Bolivia?', jsonb_build_array('Los teléfonos generales del MTEPS y la Defensoría son líneas exclusivas para denunciar trata.', 'La DGTTP identifica a la División de Trata y Tráfico de la FELCC como instancia que recibe denuncias; las líneas del MTEPS y la Defensoría son contactos generales.', 'El MTEPS publica el teléfono de la División de Trata y Tráfico de la FELCC.', 'La Defensoría del Pueblo reemplaza a los servicios de emergencia ante peligro inmediato.'), 1, 'La información oficial distingue la instancia policial que recibe denuncias de los contactos institucionales generales del MTEPS y la Defensoría.', 7, 9)
+on conflict (topic_slug, quiz_type, position) do update set
+  prompt = excluded.prompt,
+  options = excluded.options,
+  correct_index = excluded.correct_index,
+  explanation = excluded.explanation,
+  source_slide = excluded.source_slide,
+  is_active = true;
