@@ -326,19 +326,97 @@ function Home({ progress }: { progress: ProgressMap }) {
         <span className="eyebrow-line" /> APRENDER PARA PREVENIR{" "}
         <span>{String(topics.length).padStart(2, "0")} TEMAS</span>
       </div>
-      <section className="home-intro">
-        <div>
+      <section className="home-hero" aria-labelledby="home-title">
+        <div className="home-hero-copy">
           <p className="kicker">Herramientas para cuidarnos</p>
-          <h1>
+          <h1 id="home-title">
             La seguridad
             <br />
             <em>también se aprende.</em>
           </h1>
+          <p>
+            La trata y tráfico de personas pueden comenzar con engaños, falsas
+            oportunidades o contactos aparentemente inofensivos. Conoce los
+            riesgos, aprende a reconocer las señales y descubre cómo actuar
+            para protegerte y ayudar a otros.
+          </p>
+          <a className="button button-dark home-hero-link" href="#topic-heading">
+            Explorar los temas <ArrowRight size={16} />
+          </a>
         </div>
-        <p className="intro-copy">
-          Conocer las señales y saber dónde pedir ayuda puede abrir una puerta a
-          tiempo. Explora cada tema a tu ritmo.
-        </p>
+        <div className="home-hero-art" aria-hidden="true">
+          <div className="home-hero-orbit">
+            <ShieldCheck size={64} strokeWidth={1.3} />
+          </div>
+          <span>PREVENCIÓN</span>
+          <span>INFORMACIÓN · CUIDADO · APOYO</span>
+        </div>
+      </section>
+      <section className="home-objectives" aria-labelledby="objectives-title">
+        <div className="section-heading">
+          <div>
+            <p className="section-index">PARA QUÉ ESTAMOS AQUÍ</p>
+            <h2 id="objectives-title">Objetivos del sitio</h2>
+          </div>
+        </div>
+        <div className="objectives-grid">
+          <article className="objective-card">
+            <span>01</span>
+            <h3>Promover la prevención de la trata y tráfico de personas</h3>
+          </article>
+          <article className="objective-card">
+            <span>02</span>
+            <h3>Difundir información confiable y accesible</h3>
+          </article>
+          <article className="objective-card">
+            <span>03</span>
+            <h3>Ayudar a identificar señales de alerta y factores de riesgo</h3>
+          </article>
+          <article className="objective-card">
+            <span>04</span>
+            <h3>
+              Fortalecer la seguridad digital y el cuidado comunitario
+            </h3>
+          </article>
+        </div>
+      </section>
+      <section className="home-key-messages" aria-labelledby="key-messages-title">
+        <div className="section-heading">
+          <div>
+            <p className="section-index">IDEAS PARA TENER PRESENTES</p>
+            <h2 id="key-messages-title">Mensajes clave</h2>
+          </div>
+        </div>
+        <div className="key-messages-list">
+          <article className="key-message">
+            <Clock3 size={19} />
+            <p>
+              <strong>Haz una pausa y verifica.</strong> No tomes decisiones
+              importantes bajo presión o en secreto.
+            </p>
+          </article>
+          <article className="key-message">
+            <CircleAlert size={19} />
+            <p>
+              <strong>Observa el contexto.</strong> Una señal aislada no prueba
+              que exista trata; considera el conjunto de circunstancias.
+            </p>
+          </article>
+          <article className="key-message">
+            <HeartHandshake size={19} />
+            <p>
+              <strong>Apoya sin juzgar.</strong> Escucha, respeta la seguridad
+              de la persona y busca apoyo confiable.
+            </p>
+          </article>
+          <article className="key-message">
+            <ShieldCheck size={19} />
+            <p>
+              <strong>Cuida tu información.</strong> Protege tus datos y
+              comparte información personal solo por canales verificados.
+            </p>
+          </article>
+        </div>
       </section>
       <section className="topic-section" aria-labelledby="topic-heading">
         <div className="section-heading">
