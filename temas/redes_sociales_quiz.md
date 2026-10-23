@@ -34,6 +34,26 @@
 - **Por qué:** El material advierte que un hecho aislado no es prueba y recomienda atender al contexto.
 - **Referencia:** Diapositiva 3
 
+### O4. ¿Qué medida ayuda a proteger el acceso a tus cuentas?
+
+- A. Usar la misma contraseña en todas las cuentas.
+- B. Elegir una contraseña distinta para cada cuenta y activar un segundo paso si está disponible.
+- C. Compartir la contraseña con quien te escriba primero.
+- D. Publicar una foto de tus datos de acceso para recordarlos.
+- **Respuesta:** B
+- **Por qué:** Usar contraseñas distintas y activar un segundo paso reduce el riesgo de acceso no autorizado.
+- **Referencia:** Diapositiva 2
+
+### O5. Antes de publicar una imagen de otra persona, ¿qué conviene hacer?
+
+- A. Publicarla sin avisar si la foto parece divertida.
+- B. Etiquetar a sus familiares para que la encuentren.
+- C. Pedir permiso y respetar si no quiere que la compartas.
+- D. Compartirla primero en un grupo público.
+- **Respuesta:** C
+- **Por qué:** El material recomienda pedir permiso antes de publicar información o imágenes de otras personas.
+- **Referencia:** Diapositiva 2
+
 ## Evaluación obligatoria
 
 ### Q1. ¿Cuál es una buena medida para reforzar el acceso a tus cuentas?
@@ -115,6 +135,26 @@
 - **Respuesta:** C
 - **Por qué:** Ante peligro inmediato, la recomendación es recurrir a los servicios de emergencia locales.
 - **Referencia:** Diapositiva 5
+
+### Q9. Si una conversación en línea te inquieta, ¿qué puedes hacer?
+
+- A. Reunirte a solas con la persona para aclararlo.
+- B. Hacer una pausa y hablar con alguien de confianza.
+- C. Enviar dinero para terminar la conversación.
+- D. Publicar los mensajes y datos personales de quien escribió.
+- **Respuesta:** B
+- **Por qué:** El material aconseja ganar tiempo y buscar compañía en vez de resolver la situación a solas.
+- **Referencia:** Diapositiva 4
+
+### Q10. ¿Qué afirmación sobre los ajustes de privacidad es correcta?
+
+- A. Garantizan que ninguna publicación pueda compartirse.
+- B. No sirven para reducir la exposición de información.
+- C. Pueden reducir la exposición, pero no garantizan que una publicación permanezca privada.
+- D. Solo deben revisarse después de que ocurra un problema.
+- **Respuesta:** C
+- **Por qué:** La presentación explica que configurar la privacidad ayuda, aunque ningún ajuste garantiza privacidad total.
+- **Referencia:** Diapositiva 2
 
 ## Lista de aprobación
 

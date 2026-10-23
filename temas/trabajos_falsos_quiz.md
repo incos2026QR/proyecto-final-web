@@ -146,6 +146,16 @@
 - **Por qué:** La información oficial distingue la instancia policial que recibe denuncias de los contactos institucionales generales del MTEPS y la Defensoría.
 - **Referencia:** Diapositiva 7
 
+### Q10. Si ya aceptaste o viajaste por una oferta que ahora te preocupa, ¿qué debes recordar?
+
+- A. Ya no puedes pedir ayuda porque aceptaste.
+- B. Debes volver a reunirte a solas con quien te reclutó.
+- C. Todavía puedes buscar apoyo; aceptar o viajar no te hace responsable de un engaño o explotación.
+- D. Debes investigar por tu cuenta antes de hablar con alguien.
+- **Respuesta:** C
+- **Por qué:** El material indica que se puede pedir apoyo incluso después de aceptar, viajar o compartir información.
+- **Referencia:** Diapositiva 6
+
 ## Lista de aprobación
 
 - [ ] Cada respuesta está respaldada por la diapositiva indicada.

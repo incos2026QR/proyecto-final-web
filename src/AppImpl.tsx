@@ -18,10 +18,15 @@ import {
   CircleAlert,
   CircleCheck,
   Clock3,
+  Code2,
+  GraduationCap,
+  HeartHandshake,
   LockKeyhole,
+  ListChecks,
   RotateCcw,
   ShieldCheck,
   Sparkles,
+  UsersRound,
   X,
 } from "lucide-react";
 import {
@@ -90,6 +95,7 @@ function App() {
         </Link>
         <nav className="header-nav" aria-label="Navegación principal">
           <Link to="/">Temas</Link>
+          <Link to="/desarrolladores">Desarrolladores</Link>
           <span className="nav-divider" />
           <span className="anonymous-label">
             <span /> aprendizaje anónimo
@@ -99,6 +105,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home progress={progress} />} />
+          <Route path="/desarrolladores" element={<DevelopersPage />} />
           <Route
             path="*"
             element={<TopicRoutes progress={progress} onPass={savePass} />}
@@ -109,6 +116,127 @@ function App() {
         <span>Una iniciativa de prevención y cuidado digital</span>
         <span>Tu avance queda guardado en este dispositivo</span>
       </footer>
+    </div>
+  );
+}
+
+function DevelopersPage() {
+  return (
+    <div className="developers-page page-wrap">
+      <div className="eyebrow">
+        <span className="eyebrow-line" /> SOBRE EL PROYECTO
+      </div>
+      <section className="developers-hero">
+        <div className="developers-hero-icon" aria-hidden="true">
+          <UsersRound size={30} />
+        </div>
+        <p className="kicker">Cuidarnos en red</p>
+        <h1>
+          Conoce al equipo
+          <br />
+          <em>detrás del proyecto.</em>
+        </h1>
+        <p>
+          Una plataforma educativa para aprender sobre prevención y cuidado
+          digital, creada como proyecto académico.
+        </p>
+      </section>
+
+      <section className="developers-team" aria-labelledby="team-title">
+        <div className="developers-section-heading">
+          <UsersRound size={20} />
+          <h2 id="team-title">Presentación del equipo</h2>
+        </div>
+        <article className="developer-card">
+          <div className="developer-avatar" aria-hidden="true">
+            DE
+          </div>
+          <div>
+            <p className="section-index">PROYECTO DESARROLLADO POR</p>
+            <h3>Daniel Cristian Escobar Sejas</h3>
+            <p>Desarrollo y diseño de Cuidarnos en red.</p>
+          </div>
+        </article>
+      </section>
+
+      <section className="developers-grid" aria-label="Detalles del proyecto">
+        <article className="developer-info-card">
+          <div className="developers-section-heading">
+            <HeartHandshake size={20} />
+            <h2>Propósito del proyecto</h2>
+          </div>
+          <p>
+            Ofrecer un espacio accesible para aprender a reconocer riesgos en
+            entornos digitales, verificar ofertas laborales y conocer formas
+            más seguras de buscar apoyo, con contenidos de prevención claros y
+            respetuosos.
+          </p>
+        </article>
+
+        <article className="developer-info-card">
+          <div className="developers-section-heading">
+            <Code2 size={20} />
+            <h2>Tecnologías utilizadas</h2>
+          </div>
+          <ul className="technology-list">
+            <li>React y TypeScript</li>
+            <li>Vite</li>
+            <li>Supabase y PostgreSQL</li>
+            <li>React Router</li>
+            <li>CSS</li>
+          </ul>
+        </article>
+
+        <article className="developer-info-card developer-features">
+          <div className="developers-section-heading">
+            <ListChecks size={20} />
+            <h2>Funcionalidades implementadas</h2>
+          </div>
+          <ul className="feature-list">
+            <li>Catálogo de módulos educativos publicados.</li>
+            <li>Presentaciones organizadas en diapositivas.</li>
+            <li>Práctica opcional y Quiz General por tema.</li>
+            <li>Evaluación automática con puntaje mínimo de aprobación.</li>
+            <li>Seguimiento local del avance y constancia de demostración.</li>
+          </ul>
+          <p className="developer-disclaimer">
+            Las constancias son demostrativas y no constituyen credenciales
+            verificables.
+          </p>
+        </article>
+      </section>
+
+      <section className="developers-credits" aria-labelledby="credits-title">
+        <div className="developers-section-heading">
+          <GraduationCap size={20} />
+          <h2 id="credits-title">Créditos académicos</h2>
+        </div>
+        <dl className="credits-list">
+          <div>
+            <dt>Institución</dt>
+            <dd>
+              Instituto Técnico Nacional de Comercio “Federico Álvarez Plata”
+              Nocturno
+            </dd>
+          </div>
+          <div>
+            <dt>Carrera</dt>
+            <dd>Sistemas Informáticos</dd>
+          </div>
+          <div>
+            <dt>Asignatura</dt>
+            <dd>Diseño y Programación Web III</dd>
+          </div>
+          <div>
+            <dt>Docente</dt>
+            <dd>Pavel Cáceres</dd>
+          </div>
+          <div>
+            <dt>Gestión</dt>
+            <dd>2026</dd>
+          </div>
+        </dl>
+      </section>
     </div>
   );
 }
@@ -153,6 +281,15 @@ const localTopics: TopicRecord[] = [
     image_url:
       "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85",
     position: 2,
+  },
+  {
+    slug: "trata-estafas-digitales",
+    title: "Trata para cometer estafas digitales",
+    description:
+      "Aprende a reconocer ofertas falsas usadas para captar personas y a distinguir estafa de trata con fines de criminalidad forzada.",
+    image_url:
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=85",
+    position: 3,
   },
 ];
 
@@ -380,11 +517,13 @@ function TopicPage({ topicSlug }: { topicSlug: string }) {
       </section>
       <div className="learning-bottom">
         <p>
-          <BookOpen size={16} /> El cuestionario breve es opcional. Para aprobar
-          el tema y obtener tu constancia, completa el examen obligatorio.
+          <BookOpen size={16} /> El cuestionario breve de 5 preguntas es
+          opcional. Para aprobar el tema y obtener tu constancia, responde el
+          Quiz General de 10 preguntas.
         </p>
         <Link to={`/${topicSlug}-quiz`}>
-          Ir al examen obligatorio <ArrowUpRight size={15} />
+          Obtén el certificado respondiendo al Quiz General{" "}
+          <ArrowUpRight size={15} />
         </Link>
       </div>
       {showOptionalQuiz && (
@@ -452,7 +591,7 @@ function QuizPage({
       </Link>
       <div className="quiz-page-heading">
         <p className="section-index">
-          EVALUACIÓN FINAL <span className="meta-dot" /> TEMA 01
+          QUIZ GENERAL <span className="meta-dot" /> EVALUACIÓN FINAL
         </p>
         <h1>
           Lo que sabes

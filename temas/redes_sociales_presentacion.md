@@ -52,4 +52,4 @@ La responsabilidad por la explotación es de quien la comete. Haber confiado, co
 - Bloquea o reporta una cuenta solo cuando hacerlo no aumente el riesgo.
 - Si existe peligro inmediato, contacta los servicios de emergencia del lugar.
 
-**Pendiente para publicación:** Añadir y comprobar los canales oficiales de ayuda pertinentes al país o región del público.
+El número gratuito nacional para denunciar casos de trata y tráfico de personas en Bolivia es el 122 (atención las 24 horas a través de la División de Trata y Tráfico de la FELCC)

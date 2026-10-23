@@ -20,6 +20,8 @@ Duplica `.env.example` como `.env.local` y añade la URL del proyecto Supabase y
 
 El banco almacena las opciones, la respuesta correcta, la explicación y la diapositiva de referencia. El navegador obtiene preguntas desde una vista que no expone la respuesta correcta; la función `grade_quiz` las califica en Supabase y registra el intento. El porcentaje mínimo de aprobación es 80%.
 
+Cada tema ofrece una práctica opcional de 5 preguntas y un Quiz General de 10 preguntas para aprobar y obtener la constancia.
+
 ## Rutas del tema inicial
 
 - `/`: catálogo de temas y estado de avance.

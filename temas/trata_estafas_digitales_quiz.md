@@ -44,6 +44,16 @@
 - **Por qué:** Escuchar sin culpar, valorar si es seguro conversar y buscar apoyo evita exponer a la persona a represalias.
 - **Referencia:** Diapositiva 7
 
+### O5. Si una oferta o el lugar de trabajo te preocupa, ¿qué puedes hacer primero?
+
+- A. Confrontar a quien podría controlar la situación.
+- B. Pausar y consultar a alguien de confianza si hacerlo es seguro.
+- C. Intentar rescatar por tu cuenta a otra persona.
+- D. Publicar nombres y ubicaciones para pedir ayuda en redes.
+- **Respuesta:** B
+- **Por qué:** El material recomienda detenerse y buscar apoyo seguro, sin confrontar ni exponerse a más peligro.
+- **Referencia:** Diapositiva 6
+
 ## Evaluación obligatoria
 
 ### Q1. ¿Qué describe la trata con fines de criminalidad forzada en operaciones de estafa?
@@ -125,6 +135,26 @@
 - **Respuesta:** B
 - **Por qué:** La DGTTP coordina con la División de Trata y Tráfico de la FELCC; los canales de la Defensoría son de contacto general, no una línea exclusiva para trata.
 - **Referencia:** Diapositiva 8
+
+### Q9. ¿Cómo conviene responder si alguien te cuenta que fue forzado a participar en fraudes?
+
+- A. Escuchar sin juzgar y preguntar si es seguro hablar en ese momento.
+- B. Exigir que relate todos los detalles de inmediato.
+- C. Informar a quien podría estar controlando a la persona.
+- D. Publicar su historia para advertir a otras personas.
+- **Respuesta:** A
+- **Por qué:** Escuchar sin culpar y comprobar si es seguro conversar ayuda a no aumentar el riesgo ni la exposición.
+- **Referencia:** Diapositiva 7
+
+### Q10. Si una situación te preocupa, ¿qué información podrías conservar si hacerlo es seguro?
+
+- A. Contraseñas de cuentas ajenas y códigos de acceso.
+- B. Mensajes, anuncios, contratos, recibos y datos de contacto.
+- C. Fotografías e información privada de otras personas para publicarlas.
+- D. La ubicación de la persona en redes sociales.
+- **Respuesta:** B
+- **Por qué:** Conservar información pertinente puede ayudar al buscar apoyo, siempre que hacerlo no aumente el riesgo.
+- **Referencia:** Diapositiva 6
 
 ## Lista de aprobación
 
